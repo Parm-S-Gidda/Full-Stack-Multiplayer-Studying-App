@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navigation_decks">
+
+    <fragment
+        android:id="@+id/navigation_decks"
+        android:name="com.example.shuffle_showdown.ui.decks.DecksFragment"
+        android:label="My Decks"
+        tools:layout="@layout/fragment_decks"/>
+
+    <fragment
+        android:id="@+id/navigation_play"
+        android:name="com.example.shuffle_showdown.ui.play.PlayFragment"
+        android:label="Play"
+        tools:layout="@layout/fragment_play" />
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.example.shuffle_showdown.ui.history.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/activity_card_list" />
+
+    <fragment
+        android:id="@+id/navigation_invites"
+        android:name="com.example.shuffle_showdown.ui.invites.InviteFragment"
+        android:label="Invites"
+        tools:layout="@layout/activity_card_list" />
+
+</navigation>

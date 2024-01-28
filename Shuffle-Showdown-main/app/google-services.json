@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "48086180845",
+    "project_id": "shuffleshowdown",
+    "storage_bucket": "shuffleshowdown.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48086180845:android:9f59309c657ebb97cefde4",
+        "android_client_info": {
+          "package_name": "com.example.shuffle_showdown"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgQE0eJ2r4LWaFoxm-AAySNtjAqdkHxEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

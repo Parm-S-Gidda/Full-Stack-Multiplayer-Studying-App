@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/purple_700"
+        app:strokeWidth="0.5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/guest_rounds_remaining_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:text="0 Rounds Remaining"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/guest_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Unlimited Time"
+                android:layout_marginBottom="20dp"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+                <TextView
+                    android:id="@+id/guest_score_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="You: 0"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="40dp"
+                    android:gravity="left"/>
+                <TextView
+                    android:id="@+id/guest_player2_score_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Host: 0"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="40dp"
+                    android:gravity="right"/>
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/cardContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/guest_player2_score_text"
+                >
+
+                <ImageView
+                    android:id="@+id/cardBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:src="@drawable/card_bg" />
+
+                <ImageView
+                    android:id="@+id/stationaryCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:src="@drawable/card_bg" />
+
+                <TextView
+                    android:id="@+id/guest_questionText"
+                    android:layout_width="275dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loading"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="55dp"
+                    android:textSize="18sp" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/guest_answerInputLayout"
+                    android:layout_width="280dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/guest_questionText"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/guest_answerInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="What is the answer?" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/guest_btnAnswer"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/guest_answerInputLayout"
+                android:layout_gravity="right"
+                android:layout_marginTop="24dp"
+                android:text="SUBMIT"
+                app:cornerRadius="4dp" />
+
+            <TextView
+                android:id="@+id/guest_waiting_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Waiting For Other Player..."
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

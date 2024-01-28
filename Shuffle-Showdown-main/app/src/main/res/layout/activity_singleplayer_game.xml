@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/titleArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/cards_remaining_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:text="0 Cards Remaining"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/score_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Score: 0"
+            android:textSize="24sp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cardContainer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleArea"
+        >
+
+        <ImageView
+            android:id="@+id/cardBg2"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:src="@drawable/card_bg" />
+
+    </RelativeLayout>
+
+    <!-- https://ted-ielts.com/describe-your-hometown-ielts-cue-card/hometown-cue-card/ -->
+    <RelativeLayout
+        android:id="@+id/cardContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleArea"
+        >
+
+        <ImageView
+            android:id="@+id/cardBg"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:src="@drawable/card_bg" />
+
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:textSize="18sp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/answerInputLayout"
+            android:layout_width="280dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_below="@id/questionText"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/answerInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="What is the answer?" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAnswer"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="SUBMIT"
+        app:cornerRadius="4dp" />
+
+</RelativeLayout>

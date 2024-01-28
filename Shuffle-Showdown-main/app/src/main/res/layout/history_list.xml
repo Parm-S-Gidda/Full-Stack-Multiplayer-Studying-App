@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.49"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            >
+
+            <TextView
+                android:id="@+id/deckName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CMPT 300 Exam"
+                android:layout_weight="1"
+                android:maxWidth="150dp"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+
+
+            <TextView
+                android:id="@+id/single_multiplayer_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Single Player"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                android:lines="1"
+                android:textAppearance="?attr/textAppearanceBody1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            >
+
+            <TextView
+                android:id="@+id/winner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Winner: You"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:layout_weight="1"
+                android:textAlignment="textStart"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <TextView
+                android:id="@+id/otherPlayerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player 2"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"
+                android:textAppearance="?attr/textAppearanceBody1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Score: 0-0"
+                android:layout_gravity="center"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="?android:attr/textColorSecondary" />
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
